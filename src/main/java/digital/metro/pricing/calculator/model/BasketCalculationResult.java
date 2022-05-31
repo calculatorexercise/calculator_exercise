@@ -1,16 +1,16 @@
-package digital.metro.pricing.calculator;
+package digital.metro.pricing.calculator.model;
+
+import org.springframework.lang.Nullable;
 
 import java.math.BigDecimal;
 import java.util.Map;
 
 public class BasketCalculationResult {
 
-    private String customerId;
-    private Map<String, BigDecimal> pricedBasketEntries;
-    private BigDecimal totalAmount;
-
-    private BasketCalculationResult() {
-    }
+    @Nullable
+    private final String customerId;
+    private final Map<String, BigDecimal> pricedBasketEntries;
+    private final BigDecimal totalAmount;
 
     public BasketCalculationResult(String customerId, Map<String, BigDecimal> pricedBasketEntries, BigDecimal totalAmount) {
         this.customerId = customerId;
